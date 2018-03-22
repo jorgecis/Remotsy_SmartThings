@@ -19,6 +19,7 @@ First, find the Settings button at the top of SmartThings IDE page (this will on
 
 Clicking this button will open the GitHub Repository Integration page.
 To find the Remotsy SmartThing  code, enter the information below:
+
 **Owner:** jorgecis
 
 **Name:** Remotsy_SmartThings
@@ -42,7 +43,7 @@ Check the Publish box and Click the Execute Update in the bottom-right corner of
 #### Installing the Remotsy control Device Handlers
 Go to "My Device Handlers" in the IDE
 Under My Device Handlers Click on Update from Repo and select Remotsy_SmartThings from the drop-down
-Check the box next to remotsy-connect then check the Publish box and click Execute Update
+Check the box next to **remotsy-control** then check the Publish box and click Execute Update
 
 That's it in the IDE... Just install "Remotsy Connect" from the Marketplace > MyApps under the mobile app.
 
