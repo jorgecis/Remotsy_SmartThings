@@ -36,7 +36,8 @@ metadata {
 	}
 
     standardTile("switch", "generic", width: 2, height: 2, canChangeIcon: true) {
-        state "default", label:'Power',  action:"power_toggle", icon:"https://s3.amazonaws.com/remotsy/logo256.png", backgroundColor:"#2a5ca0"
+        state "default", label:'Power',  action:"power_toggle", icon:"https://s3.amazonaws.com/remotsy/logo256.png", backgroundColor:"#ffffff"
+        state "working", label:'Working',  action:"power_toggle", icon:"https://s3.amazonaws.com/remotsy/logo256.png", backgroundColor:"#2a5ca0"
     }
     
     standardTile("power", "device.switch", width: 1, height: 1, canChangeIcon: false) {
@@ -121,8 +122,11 @@ def on() {
 }
 
 def power_toggle() {
-	log.debug "POWER TOGGLE"
+    sendEvent(name:"generic", value: "working", isStateChange: true, displayed: false)
     parent.IRAction("POWER TOGGLE",device.deviceNetworkId) 
+    sendEvent(name:"generic", value: "default", isStateChange: true, displayed: false)
+    sendEvent(name:"Command", value: "Power On", displayed: true)
+	log.debug "POWER TOGGLE"
 }
 
 def mute() {
