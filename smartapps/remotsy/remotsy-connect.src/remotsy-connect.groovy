@@ -39,12 +39,12 @@ mappings {
 }
 
 private getVendorName() 	{ "Remotsy" }
-private getVendorAuthPath()	{ "https://www.remotsy.com/oauth/authorize?" }
-private getVendorTokenPath(){ "https://www.remotsy.com/oauth/token" }
+private getVendorAuthPath()	{ "https://api.remotsy.com/oauth/authorize?" }
+private getVendorTokenPath(){ "https://api.remotsy.com/oauth/token" }
 private getClientId() 		{ "smartthings" } 
 private getClientSecret() 	{ "kjgsdfslskudfgj" }
 private getVendorIcon()		{ "https://s3.amazonaws.com/remotsy/remotsy_o.png" }
-private apiUrl() 			{ "https://remotsy.com/rest/" }
+private apiUrl() 			{ "https://api.remotsy.com/rest/" }
 
 
 def authPage() {
